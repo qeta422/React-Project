@@ -43,7 +43,7 @@ const Home = () => {
         {getPaginatedStories().map((story) => (
           <div key={story.id} className="story-card">
             <h3>{story.title}</h3>
-            <p>{story.body}</p>
+            <p className="story">{story.body}</p>
             <p>
               <strong>By:</strong> {story.name}
             </p>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { StoriesContext } from "../context/StoriesContext";
 import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../animations/animations";
-import "./Authors.css";
+import "../styles/Authors.css";
 
 const Authors = () => {
   const { authors, loading, error } = useContext(StoriesContext);

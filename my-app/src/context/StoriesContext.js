@@ -14,7 +14,7 @@ export const StoriesProvider = ({ children }) => {
       try {
         const storiesData = await fetchStories();
         setStories(storiesData);
-        setAuthors([...new Set(storiesData.map(story => story.name))]); 
+        setAuthors([...new Set(storiesData.map(story => story.name))]); // Extract unique authors
         setLoading(false);
       } catch (error) {
         setError(error);

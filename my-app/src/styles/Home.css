@@ -16,25 +16,38 @@ ul {
   }
   
   .story-card {
-    padding: 20px 100px;
+    padding: 50px 100px;
+  }
+
+  .story-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s;
   }
 
   h1 {
     text-align: center;
     margin: 70px auto;
+    color: #2e2e2e;
   }
   
   h3 {
     margin: 0 0 10px 0;
     text-align: center;
+    color: #2e2e2e;
+  }
+
+  .story {
+    color: #2e2e2e!important;
+    padding: 10px 0px 60px 0px;
   }
   
   p {
     margin: 5px 0;
+    color: #0096FF!important;
   }
   
   strong {
-    color: #555;
+    color: #2e2e2e;
   }
   
   .pagination {
@@ -49,6 +62,7 @@ ul {
     border: none;
     background-color: #f0f0f0;
     cursor: pointer;
+    color: #2e2e2e;
   }
   
   .pagination button.active {
