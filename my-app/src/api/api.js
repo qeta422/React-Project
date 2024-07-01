@@ -9,7 +9,7 @@ export const fetchStories = async () => {
     title: story.title,
     body: story.story,
     name: story.author,
-    uploadDate: new Date().toISOString().split('T')[0] 
+    uploadDate: new Date().toISOString().split('T')[0],
   }));
   return stories;
 };

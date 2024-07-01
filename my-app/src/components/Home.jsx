@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { fetchStories } from "../api/api";
+import React, { useContext, useState } from "react";
+import { StoriesContext } from "../context/StoriesContext";
 import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../animations/animations";
 import "../styles/Home.css";
@@ -7,24 +7,8 @@ import "../styles/Home.css";
 const ITEMS_PER_PAGE = 20;
 
 const Home = () => {
-  const [stories, setStories] = useState([]);
+  const { stories, loading, error } = useContext(StoriesContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const getStories = async () => {
-      try {
-        const storiesData = await fetchStories();
-        setStories(storiesData);
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
-    getStories();
-  }, []);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
