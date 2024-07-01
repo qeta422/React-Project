@@ -27,17 +27,17 @@ li {
 h1 {
   text-align: center;
   margin: 70px auto;
-  color: #2e2e2e;
+  color: #616161 !important;
 }
 
 h3 {
   margin: 0 0 10px 0;
   text-align: center;
-  color: #2e2e2e;
+  color: #616161;
 }
 
 .story {
-  color: #2e2e2e;
+  color: #616161;
   padding: 10px 0px 60px 0px;
 }
 
