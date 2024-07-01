@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/YourStory">Your Story</Link>
         </li>
       </ul>
       <button onClick={toggleTheme}>Toggle Theme: {theme}</button>

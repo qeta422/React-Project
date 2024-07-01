@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../animations/animations";
 import ContactForm from "../forms/contactForm";
 
-const Contact = () => {
+const YourStory = () => {
   return (
     <motion.div
       initial="initial"
@@ -12,10 +12,10 @@ const Contact = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>Contact Us</h1>
+      <h1>Create Story</h1>
       <ContactForm />
     </motion.div>
   );
 };
 
-export default Contact;
+export default YourStory;

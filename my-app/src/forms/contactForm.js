@@ -7,20 +7,23 @@ import '../styles/ContactForm.css';
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
+  title: yup.string().required('Title is required'),
+  date: yup.date().required('Date is required').typeError('Invalid date'),
   message: yup.string().required('Message is required'),
 });
 
 const ContactForm = () => {
   const [savedName, setSavedName] = useLocalStorage('name', '');
-  const [savedEmail, setSavedEmail] = useLocalStorage('email', '');
+  const [savedTitle, setSavedTitle] = useLocalStorage('title', '');
+  const [savedDate, setSavedDate] = useLocalStorage('date', '');
   const [savedMessage, setSavedMessage] = useLocalStorage('message', '');
 
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
       name: savedName,
-      email: savedEmail,
+      title: savedTitle,
+      date: savedDate,
       message: savedMessage,
     },
   });
@@ -28,24 +31,30 @@ const ContactForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     setSavedName(data.name);
-    setSavedEmail(data.email);
+    setSavedTitle(data.title);
+    setSavedDate(data.date);
     setSavedMessage(data.message);
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
-        <label>Name</label>
+        <label>Your Full Name</label>
         <input {...register('name')} />
         <p>{errors.name?.message}</p>
       </div>
       <div>
-        <label>Email</label>
-        <input {...register('email')} />
-        <p>{errors.email?.message}</p>
+        <label>Story Title</label>
+        <input {...register('title')} />
+        <p>{errors.title?.message}</p>
       </div>
       <div>
-        <label>Message</label>
+        <label>Date</label>
+        <input type="date" {...register('date')} />
+        <p>{errors.date?.message}</p>
+      </div>
+      <div>
+        <label>Your Story</label>
         <textarea {...register('message')} />
         <p>{errors.message?.message}</p>
       </div>

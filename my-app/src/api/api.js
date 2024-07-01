@@ -4,7 +4,7 @@ const API_URL = 'https://shortstories-api.onrender.com/stories';
 
 export const fetchStories = async () => {
   const response = await axios.get(API_URL);
-  const stories = response.data.slice(0, 20).map((story) => ({
+  const stories = response.data.slice(0, 120).map((story) => ({
     id: story._id,
     title: story.title,
     body: story.story,

@@ -9,8 +9,24 @@ ul {
     margin-bottom: 10px;
   }
   
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .story-card {
+    padding: 20px 100px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 70px auto;
+  }
+  
   h3 {
     margin: 0 0 10px 0;
+    text-align: center;
   }
   
   p {
@@ -19,5 +35,28 @@ ul {
   
   strong {
     color: #555;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .pagination button:hover:not(.active) {
+    background-color: #ddd;
   }
   
