@@ -3,12 +3,14 @@ form {
     flex-direction: column;
   }
   
-  div {
-    margin-bottom: 1rem;
+
+  .labels {
+    width: 150px;
+    margin: 0.5rem 30rem;
   }
-  
-  label {
-    margin-bottom: 0.5rem;
+
+  .labels label {
+    margin-bottom: 2rem;
   }
   
   input, textarea {
@@ -18,7 +20,6 @@ form {
   }
   
   p {
-    color: red;
     font-size: 0.875rem;
   }
   
@@ -29,6 +30,10 @@ form {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  .submit {
+    margin-top: 5rem;
   }
   
   button:hover {

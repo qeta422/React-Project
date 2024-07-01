@@ -45,7 +45,7 @@ footer {
 
 main {
   padding: 20px;
-  margin-bottom: 60px; /* To avoid overlap with footer */
+  margin-bottom: 60px; 
 }
 
 @media screen and (max-width: 600px) {

@@ -53,29 +53,31 @@ const YourStory = () => {
       variants={pageVariants}
       transition={pageTransition}
     >
-      <h1>Create Story</h1>
+      <h1 className="title">Create Story</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className="labels">
           <label>Your Full Name</label>
           <input {...register("name")} />
           <p>{errors.name?.message}</p>
         </div>
-        <div>
+        <div className="labels">
           <label>Story Title</label>
           <input {...register("title")} />
           <p>{errors.title?.message}</p>
         </div>
-        <div>
+        <div className="labels">
           <label>Date</label>
           <input type="date" {...register("date")} />
           <p>{errors.date?.message}</p>
         </div>
-        <div>
+        <div className="labels">
           <label>Your Story</label>
           <textarea {...register("message")} />
           <p>{errors.message?.message}</p>
         </div>
-        <button type="submit">Submit</button>
+        <button className="submit" type="submit">
+          Submit
+        </button>
       </form>
     </motion.div>
   );
