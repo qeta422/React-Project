@@ -1,76 +1,75 @@
 ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  .story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .story-card {
-    padding: 50px 100px;
-  }
+  list-style-type: none;
+  padding: 0;
+}
 
-  .story-card:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 0.5s;
-  }
+li {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
 
-  h1 {
-    text-align: center;
-    margin: 70px auto;
-    color: #2e2e2e;
-  }
-  
-  h3 {
-    margin: 0 0 10px 0;
-    text-align: center;
-    color: #2e2e2e;
-  }
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-  .story {
-    color: #2e2e2e!important;
-    padding: 10px 0px 60px 0px;
-  }
-  
-  p {
-    margin: 5px 0;
-    color: #0096FF;
-  }
-  
-  strong {
-    color: #2e2e2e;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    color: #2e2e2e;
-  }
-  
-  .pagination button.active {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .pagination button:hover:not(.active) {
-    background-color: #ddd;
-  }
-  
+.story-card {
+  padding: 50px 100px;
+}
+
+.story-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
+}
+
+h1 {
+  text-align: center;
+  margin: 70px auto;
+  color: #2e2e2e;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: #2e2e2e;
+}
+
+.story {
+  color: #2e2e2e;
+  padding: 10px 0px 60px 0px;
+}
+
+p {
+  margin: 5px 0;
+  color: #0096ff;
+}
+
+strong {
+  color: #2e2e2e;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  color: #2e2e2e;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+}

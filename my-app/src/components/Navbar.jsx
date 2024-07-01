@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
-  const [theme, setTheme] = useLocalStorage("theme", "light");
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav>
